@@ -29,7 +29,36 @@ namespace csharp_functions
             //Console.WriteLine($"Il quadrato di {num} è {Quadrato(num)} ");
 
             //3 funzione
-         
+
+            //int lunghezza;
+            //Console.WriteLine("Inserisci la lunghezza dell`array");
+            //int.TryParse(Console.ReadLine(), out lunghezza);
+            //int[] arrayNum = new int[lunghezza];
+            //for (int i = 0; i < arrayNum.Length; i++)
+            //{
+            //    Console.WriteLine($"Inserisci {i + 1} numero ");
+
+            //    int num;
+            //    int.TryParse(Console.ReadLine(), out num);
+            //    arrayNum[i] = num;
+            //}
+            //int[] arrayCopia = (int[])arrayNum.Clone();
+            //ElevaArrayAlQuadrato(arrayCopia);
+            //Console.Write("[");
+            //for (int i = 0; i < arrayCopia.Length; i++)
+            //{
+
+            //    Console.Write(arrayCopia[i]);
+
+            //    if (arrayCopia[i] != arrayCopia[arrayCopia.Length - 1])
+            //        Console.Write(",");
+
+            //}
+            //Console.Write("]");
+
+            //4 funzione
+
+            //int[] arrayNum = { 2, 6, 7, 5, 3, 9 };
             int lunghezza;
             Console.WriteLine("Inserisci la lunghezza dell`array");
             int.TryParse(Console.ReadLine(), out lunghezza);
@@ -42,8 +71,21 @@ namespace csharp_functions
                 int.TryParse(Console.ReadLine(), out num);
                 arrayNum[i] = num;
             }
+            Console.Write("[");
+            for (int i = 0; i < arrayNum.Length; i++)
+            {
+
+                Console.Write(arrayNum[i]);
+
+                if (arrayNum[i] != arrayNum[arrayNum.Length - 1])
+                    Console.Write(",");
+
+            }
+            Console.WriteLine("]");
+
+
             int[] arrayCopia = (int[])arrayNum.Clone();
-            ElevaArrayAlQuadrato(arrayCopia);
+            int[] arrayQuadrato = ElevaArrayAlQuadrato(arrayCopia);
             Console.Write("[");
             for (int i = 0; i < arrayCopia.Length; i++)
             {
@@ -54,50 +96,20 @@ namespace csharp_functions
                     Console.Write(",");
 
             }
-            Console.Write("]");
+            Console.WriteLine("]");
+            Console.Write("[");
+            for (int i = 0; i < arrayNum.Length; i++)
+            {
 
-            //4 funzione
+                Console.Write(arrayNum[i]);
 
-            //int[] arrayNum = { 2, 6, 7, 5, 3, 9};
-            //Console.Write("[");
-            //for (int i = 0; i < arrayNum.Length; i++)
-            //{
+                if (arrayNum[i] != arrayNum[arrayNum.Length - 1])
+                    Console.Write(",");
 
-            //    Console.Write(arrayNum[i]);
-
-            //    if (arrayNum[i] != arrayNum[arrayNum.Length - 1])
-            //        Console.Write(",");
-
-            //}
-            //Console.WriteLine("]");
-
-
-            //int[] arrayCopia = (int[])arrayNum.Clone();
-            //int[] arrayQuadrato =  ElevaArrayAlQuadrato(arrayCopia);
-            //Console.Write("[");
-            //for (int i = 0; i < arrayCopia.Length; i++)
-            //{
-
-            //    Console.Write(arrayCopia[i]);
-
-            //    if (arrayCopia[i] != arrayCopia[arrayCopia.Length - 1])
-            //        Console.Write(",");
-
-            //}
-            //Console.WriteLine("]");
-            //Console.Write("[");
-            //for (int i = 0; i < arrayNum.Length; i++)
-            //{
-
-            //    Console.Write(arrayNum[i]);
-
-            //    if (arrayNum[i] != arrayNum[arrayNum.Length - 1])
-            //        Console.Write(",");
-
-            //}
-            //Console.WriteLine("]");
-            //Console.WriteLine($"La somma dei numeri è {sommaElementiArray(arrayNum)}");
-            //Console.WriteLine($"La somma dei numeri al quadrato è {sommaElementiArray(arrayQuadrato)}");
+            }
+            Console.WriteLine("]");
+            Console.WriteLine($"La somma dei numeri è {sommaElementiArray(arrayNum)}");
+            Console.WriteLine($"La somma dei numeri al quadrato è {sommaElementiArray(arrayQuadrato)}");
 
 
 
