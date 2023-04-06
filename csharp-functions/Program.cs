@@ -9,14 +9,16 @@ namespace csharp_functions
             //1 funzione
             //int lunghezza;
             //Console.WriteLine("Inserisci la lunghezza dell`array");
-            //int.TryParse(Console.ReadLine(), out lunghezza);
+            //while(!int.TryParse(Console.ReadLine(), out lunghezza))
+            //Console.WriteLine("Inserisci un vero numero");
             //int[] arrayNum = new int[lunghezza];
-            //for(int i = 0; i < arrayNum.Length; i++)
+            //for (int i = 0; i < arrayNum.Length; i++)
             //{
-            //    Console.WriteLine($"Inserisci {i+1} numero ");
+            //    Console.WriteLine($"Inserisci {i + 1} numero ");
 
             //    int num;
-            //    int.TryParse(Console.ReadLine(), out num);
+            //    while (!int.TryParse(Console.ReadLine(), out num))
+            //        Console.WriteLine("Inserisci un vero numero");
             //    arrayNum[i] = num;
             //}
             //StampaArray(arrayNum);
@@ -30,86 +32,93 @@ namespace csharp_functions
 
             //3 funzione
 
-            //int lunghezza;
-            //Console.WriteLine("Inserisci la lunghezza dell`array");
-            //int.TryParse(Console.ReadLine(), out lunghezza);
-            //int[] arrayNum = new int[lunghezza];
-            //for (int i = 0; i < arrayNum.Length; i++)
-            //{
-            //    Console.WriteLine($"Inserisci {i + 1} numero ");
-
-            //    int num;
-            //    int.TryParse(Console.ReadLine(), out num);
-            //    arrayNum[i] = num;
-            //}
-            //int[] arrayCopia = (int[])arrayNum.Clone();
-            //ElevaArrayAlQuadrato(arrayCopia);
-            //Console.Write("[");
-            //for (int i = 0; i < arrayCopia.Length; i++)
-            //{
-
-            //    Console.Write(arrayCopia[i]);
-
-            //    if (arrayCopia[i] != arrayCopia[arrayCopia.Length - 1])
-            //        Console.Write(",");
-
-            //}
-            //Console.Write("]");
-
-            //4 funzione
-
-            //int[] arrayNum = { 2, 6, 7, 5, 3, 9 };
             int lunghezza;
             Console.WriteLine("Inserisci la lunghezza dell`array");
-            int.TryParse(Console.ReadLine(), out lunghezza);
+            while (!int.TryParse(Console.ReadLine(), out lunghezza))
+                Console.WriteLine("Inserisci un vero numero");
             int[] arrayNum = new int[lunghezza];
             for (int i = 0; i < arrayNum.Length; i++)
             {
                 Console.WriteLine($"Inserisci {i + 1} numero ");
 
                 int num;
-                int.TryParse(Console.ReadLine(), out num);
+                while (!int.TryParse(Console.ReadLine(), out num))
+                    Console.WriteLine("Inserisci un vero numero");
                 arrayNum[i] = num;
             }
-            Console.Write("[");
-            for (int i = 0; i < arrayNum.Length; i++)
-            {
-
-                Console.Write(arrayNum[i]);
-
-                if (arrayNum[i] != arrayNum[arrayNum.Length - 1])
-                    Console.Write(",");
-
-            }
-            Console.WriteLine("]");
-
-
             int[] arrayCopia = (int[])arrayNum.Clone();
-            int[] arrayQuadrato = ElevaArrayAlQuadrato(arrayCopia);
+            ElevaArrayAlQuadrato(arrayCopia);
             Console.Write("[");
             for (int i = 0; i < arrayCopia.Length; i++)
             {
 
                 Console.Write(arrayCopia[i]);
 
-                if (arrayCopia[i] != arrayCopia[arrayCopia.Length - 1])
-                    Console.Write(",");
+                if (arrayCopia[i] == arrayCopia[arrayCopia.Length - 1]) Console.Write("");
+                else Console.Write(",");
 
             }
-            Console.WriteLine("]");
-            Console.Write("[");
-            for (int i = 0; i < arrayNum.Length; i++)
-            {
+            Console.Write("]");
 
-                Console.Write(arrayNum[i]);
 
-                if (arrayNum[i] != arrayNum[arrayNum.Length - 1])
-                    Console.Write(",");
 
-            }
-            Console.WriteLine("]");
-            Console.WriteLine($"La somma dei numeri è {sommaElementiArray(arrayNum)}");
-            Console.WriteLine($"La somma dei numeri al quadrato è {sommaElementiArray(arrayQuadrato)}");
+            //4 funzione
+
+            //int lunghezza;
+            //Console.WriteLine("Inserisci la lunghezza dell`array");
+            //while (!int.TryParse(Console.ReadLine(), out lunghezza))
+
+            //    Console.WriteLine("Inserisci un vero numero"); ;
+            //int[] arrayNum = new int[lunghezza];
+            //for (int i = 0; i < arrayNum.Length; i++)
+            //{
+            //    Console.WriteLine($"Inserisci {i + 1} numero ");
+
+            //    int num;
+            //    while (!int.TryParse(Console.ReadLine(), out num))
+
+            //        Console.WriteLine("Inserisci un vero numero"); ;
+
+            //    arrayNum[i] = num;
+            //}
+            //Console.Write("[");
+            //for (int i = 0; i < arrayNum.Length; i++)
+            //{
+
+            //    Console.Write(arrayNum[i]);
+            //    if (arrayNum[i] == arrayNum[arrayNum.Length - 1]) Console.Write("");
+            //    else Console.Write(",");
+
+            //}
+            //Console.WriteLine("]");
+
+
+            //int[] arrayCopia = (int[])arrayNum.Clone();
+            //int[] arrayQuadrato = ElevaArrayAlQuadrato(arrayCopia);
+            //Console.Write("[");
+            //for (int i = 0; i < arrayCopia.Length; i++)
+            //{
+
+            //    Console.Write(arrayCopia[i]);
+
+            //    if (arrayCopia[i] == arrayCopia[arrayCopia.Length - 1]) Console.Write("");
+            //    else Console.Write(",");
+
+            //}
+            //Console.WriteLine("]");
+            //Console.Write("[");
+            //for (int i = 0; i < arrayNum.Length; i++)
+            //{
+
+            //    Console.Write(arrayNum[i]);
+
+            //    if (arrayNum[i] == arrayNum[arrayNum.Length - 1]) Console.Write("");
+            //    else Console.Write(",");
+
+            //}
+            //Console.WriteLine("]");
+            //Console.WriteLine($"La somma dei numeri è {sommaElementiArray(arrayNum)}");
+            //Console.WriteLine($"La somma dei numeri al quadrato è {sommaElementiArray(arrayQuadrato)}");
 
 
 
@@ -124,8 +133,8 @@ namespace csharp_functions
 
                 Console.Write(array[i]);
 
-                if (array[i] != array[array.Length - 1])
-                    Console.Write(",");
+                if (array[i] == array[array.Length - 1]) Console.Write("");
+                else Console.Write(",");
 
             }
             Console.Write("]");
